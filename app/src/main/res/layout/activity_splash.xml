@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/color_5F696F"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:src="@mipmap/order_img"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.order.android.view.SuperTextView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+
+        android:id="@+id/super_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_splash_tv"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/qb_px_40"
+       />
+
+    <com.order.android.view.RxRoundProgressBar
+        android:id="@+id/loading_progress_bar"
+        android:layout_width="@dimen/qb_px_600"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:rcBackgroundColor="@color/color_ffffff"
+        app:rcBackgroundPadding="2dp"
+        app:rcMax="100"
+        app:rcProgress="90"
+        app:rcProgressColor="@color/custom_progress_blue_progress"
+        app:rcRadius="20dp"
+        tools:ignore="MissingConstraints"
+        />
+
+</RelativeLayout>

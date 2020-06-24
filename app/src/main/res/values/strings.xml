@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Order</string>
+    <string name="app_splash_tv">欢迎使用金色年华点餐系统</string>
+    <string name="app_order_title">金色年华点餐系统</string>
+</resources>

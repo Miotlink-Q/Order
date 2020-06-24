@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_e4e4e4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/meal_title"
+        android:background="@color/color_3d3d3d"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_60">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/qb_px_30"
+            android:text="@string/app_order_title"
+            android:textColor="@color/color_ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/meal_type_tv"
+            android:text="中餐"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/qb_px_30"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/qb_px_10"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/meal_week_tv"
+            android:text="星期四"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/qb_px_20"
+            android:layout_toLeftOf="@+id/meal_type_tv"
+            android:gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/meal_time_tv"
+            android:text="2020.05.28"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/qb_px_30"
+            android:layout_toLeftOf="@+id/meal_week_tv"
+            android:gravity="center_vertical"
+            android:layout_marginRight="@dimen/qb_px_15"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/meal_details_rl"
+        android:layout_above="@+id/meal_user_details_rl"
+        android:layout_below="@+id/meal_title"
+        android:layout_marginLeft="@dimen/qb_px_25"
+        android:layout_marginTop="@dimen/qb_px_10"
+        android:background="@drawable/order_list_background"
+        android:layout_marginRight="@dimen/qb_px_25"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="0.75dp"
+            android:layout_marginLeft="0.75dp"
+            android:layout_marginRight="0.75dp"
+            android:id="@+id/dishes_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/meal_user_details_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_80">
+        <com.order.android.view.CircleImageView
+            android:id="@+id/meal_user_circle_img"
+            android:layout_width="@dimen/qb_px_60"
+            android:layout_height="@dimen/qb_px_60"
+            android:src="@mipmap/hugh"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/qb_px_22"
+            app:civ_border_width="@dimen/qb_px_2"
+            app:civ_border_color="@color/light" />
+        <LinearLayout
+            android:id="@+id/meal_user_ll"
+            android:layout_toRightOf="@+id/meal_user_circle_img"
+            android:layout_marginLeft="@dimen/qb_px_10"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/user_name_tv"
+                android:text="张三"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/qb_px_18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/user_address_tv"
+                android:text="一期2幢2单元"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/qb_px_18"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/price_meal_ll"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/total_price_tv"
+                android:textSize="@dimen/qb_px_20"
+                android:text="总价:"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/price_tv"
+                android:textSize="@dimen/qb_px_30"
+                android:textStyle="bold"
+                android:textColor="@color/color_ff004e"
+                android:text="4.0"
+
+                android:layout_marginLeft="@dimen/qb_px_10"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:textSize="@dimen/qb_px_20"
+                android:text="元"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/price_meal_ll"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_marginRight="@dimen/qb_px_25"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/previous_btn"
+                android:layout_alignParentLeft="true"
+                android:text="上一位"
+                android:textSize="@dimen/qb_px_15"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_bottom_cyan_selector"
+                android:textColor="@color/color_ffffff"
+                android:layout_width="@dimen/qb_px_70"
+                android:layout_height="@dimen/qb_px_40"/>
+            <Button
+
+                android:id="@+id/submit_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="确定"
+                android:textSize="@dimen/qb_px_15"
+                android:textColor="@color/color_ffffff"
+                android:background="@drawable/btn_bottom_sure_selector"
+                android:layout_width="@dimen/qb_px_70"
+                android:layout_height="@dimen/qb_px_40"/>
+            <Button
+                android:text="取消"
+                android:background="@drawable/btn_bottom_cancel_selector"
+                android:id="@+id/cancel_btn"
+                android:textSize="@dimen/qb_px_15"
+                android:textColor="@color/color_ffffff"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/qb_px_70"
+                android:layout_height="@dimen/qb_px_40"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

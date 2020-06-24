@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_80">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/back_img"
+            android:layout_marginLeft="@dimen/qb_px_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/setting_iv"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:layout_marginRight="@dimen/qb_px_20"
+            android:src="@mipmap/setting_img"
+            android:scaleType="fitXY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/color_1E232B"
+            android:textSize="@dimen/qb_px_30"
+            android:layout_centerInParent="true"
+            android:text="@string/app_splash_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_centerVertical="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <RelativeLayout
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <ImageView
+              android:id="@+id/face_scan_iv"
+              android:layout_centerInParent="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/face_scan" />
+      </RelativeLayout>
+      <RelativeLayout
+          android:layout_weight="1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:id="@+id/qrcode_scan_iv"
+              android:layout_centerInParent="true"
+              android:src="@mipmap/scan_qrcode"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+      </RelativeLayout>
+  </LinearLayout>
+
+</RelativeLayout>
